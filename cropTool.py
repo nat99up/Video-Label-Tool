@@ -44,7 +44,7 @@ class MyWidget(QtWidgets.QWidget):
         pe2 = QtGui.QPalette()
         pe2.setColor(QtGui.QPalette.WindowText,Qt.white)
         self.control.setPalette(pe2)
-        self.control.setText('[L] : load bbox   [S] : save bbox   [E] : erase interpolates this session\n[→] : next image   [←] : previous image   [>] : next × 10   [<] : previous × 10\n[C] : cancle bbox(from-to)[Q] : quit')
+        self.control.setText('[L] : load bbox   [S] : save bbox   [E] : erase interpolates this session\n[→] : next image   [←] : previous image   [>] : next × 10   [<] : previous × 10\n[C] : cancle bbox(from-to)  [Q] : quit')
 
         # init to 0.png
         self.LT = QtCore.QPoint()
@@ -114,6 +114,8 @@ class MyWidget(QtWidgets.QWidget):
             head,tail = min(self.cancelHead,self.img_ptr), max(self.cancelHead,self.img_ptr)
             for i in range(head,tail+1):
                 self.bbox_info[i] = [0,0,0,0]
+                if i in self.annotation_list:
+                    self.annotation_list.remove(i)
             self.cancelHead = None
             print('Cancel from',head,'to',tail)
 
