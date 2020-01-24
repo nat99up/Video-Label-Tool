@@ -36,3 +36,18 @@ python3 cropTool.py -d data/example/
 # output file = data/example.crop
 # each row in .crop file = [filename] [x1] [y1] [x2] [y2]
 ```
+
+## .crop file loading api
+``` python
+
+from cropLoader import cropLoader
+
+a = cropLoader(['data/example.crop'],isView=False)
+# if isView = True , It will play the frames with the labeled bbox (cv2)
+
+# Loader will not load the info of image without bbox labeling
+# a = [itvl_1, itvl_2, ...]
+# itvl_i = [info_1, info_2, ...]
+# info_i = {'img_path': 'path/to/image' ,'boxes': array([ x1, y1, x2, y2])}
+
+```

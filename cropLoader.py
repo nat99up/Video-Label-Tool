@@ -49,4 +49,5 @@ def cropLoader(crop_files,dataset=None,isView=False):
     return interval_datas
 
 if __name__ == '__main__':
-    a = cropLoader(['1.17/9.crop'],isView=True)
+    a = cropLoader(['data/1.17/9.crop'],isView=False)
+    print(a)
