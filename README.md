@@ -1,9 +1,9 @@
-# VideoLabelTool
+# Video-Label-Tool
 A label-tool of continuous frames developed by pyqt5
 
 ## Description
-We can use hand-annotations(mouse) of 1.png and 10.png to auto generate interpolated-annotations of 2~9.png.  
-We also can hand-annotate a image has already interpolated-annotated to adjust its bbox ,and a new
+It can use hand-annotations(mouse) of 1.png and 10.png to auto generate interpolated-annotations of 2~9.png.  
+It also can hand-annotate a image has already interpolated-annotated to adjust its bbox ,and a new
 hand-annotation will start a new interpolation job at a mean time.
 
 ![image](https://github.com/nat99up/VideoLabelTool/blob/master/util/Demo.gif)
